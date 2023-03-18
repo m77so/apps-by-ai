@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>単語置換アプリ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1>単語置換アプリ</h1>
+      <form>
+        <table>
+          <thead>
+            <tr>
+              <th>置換前</th>
+              <th>置換後</th>
+              <th><button type="button" class="replace-button" onclick="replaceWord()">置換</button></th>
+            </tr>
+          </thead>
+          <tbody id="replaceTable">
+            <tr>
+              <td><input type="text" class="before"></td>
+              <td><input type="text" class="after"></td>
+              <td><button type="button" class="delete-button" onclick="deleteRow(this)">削除</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form-row">
+          <input type="button" value="行追加" onclick="addRow()">
+        </div>
+        <textarea id="input"></textarea>
+        <div class="output">
+          <textarea id="output" class="output-textarea"></textarea>
+          <button type="button" onclick="selectAll()">全選択してクリップボードにコピー</button>
+        </div>
+        <div id="highlightedText"></div>
+        <div class="reverse-transform">
+          <textarea id="reversedText" placeholder="逆変換したテキストがここに表示されます" readonly></textarea>
+          <div class="form-row">
+            <input type="button" value="逆変換" onclick="reverseTransform()">
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
