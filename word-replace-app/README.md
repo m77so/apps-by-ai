@@ -1,3 +1,27 @@
+# Word Replacement App
+
+This app allows you to replace words within the input text. By setting the word to be replaced and the word to replace it with, you can replace multiple words within the text at once.
+
+## How to Use
+
+To try out the app, please click on the following link:
+
+[Word Replacement App](https://m77so.github.io/apps-by-ai/word-replace-app/)
+
+1. Enter the text that you want to replace in the input text area.
+2. Select the word that you want to replace, and a replacement rule will be automatically added. The selected word will be entered as the word to be replaced.
+3. Enter the new word to replace the selected word in the "Replacement" column of the replacement rule table.
+4. If you want to replace other words, repeat the same process by selecting the word and entering the new replacement word.
+5. Once you have set up all the replacement rules, click the "Replace" button to replace the words in the input text.
+
+## Developer
+
+This app was created by ChatGPT, who developed over 90% of the code.
+
+## License
+
+MIT License
+
 # 単語置換アプリ
 
 このアプリは、入力されたテキスト内の単語を置換することができます。置換したい単語と置換後の単語を設定することで、テキスト内の複数の単語を一度に置換することができます。
@@ -22,3 +46,4 @@
 ## ライセンス
 
 MIT License
+
