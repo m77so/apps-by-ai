@@ -14,26 +14,30 @@
             <tr>
               <th>置換前</th>
               <th>置換後</th>
-              <th><button type="button" class="replace-button" onclick="replaceWord()">置換</button></th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="replaceTable">
             <tr>
               <td><input type="text" class="before"></td>
               <td><input type="text" class="after"></td>
-              <td><button type="button" class="delete-button" onclick="deleteRow(this)">削除</button></td>
+              <td><input type="button" class="delete-button" value="削除" onclick="deleteRow(this)"></td>
             </tr>
           </tbody>
         </table>
         <div class="form-row">
+          <input type="button" value="置換" class="replace-button" onclick="replaceWord()">
           <input type="button" value="行追加" onclick="addRow()">
         </div>
+        入力テキスト
         <textarea id="input"></textarea>
+        出力テキスト
         <div class="output">
           <textarea id="output" class="output-textarea"></textarea>
-          <button type="button" onclick="selectAll()">全選択してクリップボードにコピー</button>
+          <input type="button"  onclick="selectAll()" value="全選択してクリップボードにコピー">
         </div>
         <div id="highlightedText"></div>
+        逆変換テキスト
         <div class="reverse-transform">
           <textarea id="reversedText" placeholder="逆変換したテキストがここに表示されます" readonly></textarea>
           <div class="form-row">
@@ -41,7 +45,27 @@
           </div>
         </div>
       </form>
-    </div>
+    <h2>使い方</h2>
+    <p>このWebアプリでは、入力テキスト内で単語を選択するだけで、自動的に置換ルールの行を追加する機能が提供されています。以下に、利用者目線での使い方をわかりやすく説明します。</p>
+    <ol>
+      <li>入力テキストエリアに、単語を置換したいテキストを入力します。</li>
+      <li>置換したい単語をマウスで選択します。選択すると、自動的に選択した単語が置換ルールテーブルに追加されます。</li>
+      <li>追加された行の「置換後」欄に、選択した単語を置換する新しい単語を入力します。</li>
+      <li>他の単語も置換したい場合は、入力テキスト内で選択して同様の手順を繰り返します。選択するたびに、新しい行が自動的に追加されます。</li>
+      <li>すべての置換ルールを設定したら、「置換」ボタンをクリックして、入力テキスト内の単語を置換します。</li>
+      </ol>
+      <p>この機能により、簡単に単語を選択して置換ルールを追加できます。選択した単語が自動的に置換前の単語として入力されることで、手間が省け、ユーザー体験が向上します。また、置換ルールテーブルに追加された行は、不要になった場合には削除することもできます。行末の「削除」ボタンをクリックすることで、対応する行が削除されます。</p>
+      <h2>逆変換機能の使い方</h2>
+      <ol>
+        <li>まず、入力テキストエリアに単語を置換したいテキストを入力し、置換ルールを設定します。</li>
+        <li>「置換」ボタンをクリックして、入力テキスト内の単語を置換します。置換後のテキストは、「出力テキスト」エリアに表示されます。</li>
+        <li>「逆変換」ボタンをクリックします。これにより、出力テキストエリアの内容が元の入力テキストに戻ります。逆変換したテキストは、「逆変換テキスト」エリアに表示されます。</li>
+      </ol>
+      </div>
     <script src="script.js"></script>
+
+    <div style="text-align:center; margin-top: 20px;">
+        <p>このWebアプリはChatGPTによって90%以上が作成されました。</p>
+      </div>
   </body>
 </html>
